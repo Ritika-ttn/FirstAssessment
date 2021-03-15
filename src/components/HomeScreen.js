@@ -97,25 +97,37 @@ class HomeScreen extends Component {
           </View>
           <View style={styles.thirdContainer}>
             <View style={styles.package}>
-              <Image
-                style={styles.packageImages}
-                source={require('../assets/pill.png')}
-              />
-              <Text style={styles.packageText}>Medicines</Text>
+              <TouchableOpacity
+                style={styles.touch}
+                onPress={() => alert('You Clicked Medicines')}>
+                <Image
+                  style={styles.packageImages}
+                  source={require('../assets/pill.png')}
+                />
+                <Text style={styles.packageText}>Medicines</Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.package}>
-              <Image
-                style={styles.packageImages}
-                source={require('../assets/microscope.png')}
-              />
-              <Text style={styles.packageText}>Tests & Packages</Text>
+              <TouchableOpacity
+                style={styles.touch}
+                onPress={() => alert('You Clicked Tests & Packages')}>
+                <Image
+                  style={styles.packageImages}
+                  source={require('../assets/microscope.png')}
+                />
+                <Text style={styles.packageText}>Tests & Packages</Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.package}>
-              <Image
-                style={styles.packageImages}
-                source={require('../assets/monitor.png')}
-              />
-              <Text style={styles.packageText}>Online Consultation</Text>
+              <TouchableOpacity
+                style={styles.touch}
+                onPress={() => alert('You Clicked Online Consultation')}>
+                <Image
+                  style={styles.packageImages}
+                  source={require('../assets/monitor.png')}
+                />
+                <Text style={styles.packageText}>Online Consultation</Text>
+              </TouchableOpacity>
             </View>
           </View>
 
@@ -124,50 +136,63 @@ class HomeScreen extends Component {
               <ScrollView horizontal={true}>
                 <View style={styles.hospitalEquipmemts}>
                   <View style={styles.hospitalFacilities}>
-                    <Image
-                      style={styles.facilities}
-                      source={require('../assets/stethoscope.png')}
-                    />
+                    <TouchableOpacity
+                      onPress={() => alert('Doctor Appointment')}>
+                      <Image
+                        style={styles.facilities}
+                        source={require('../assets/stethoscope.png')}
+                      />
+                    </TouchableOpacity>
                   </View>
 
                   <Text style={styles.facilitiesText}>Doctor Appointment</Text>
                 </View>
                 <View style={styles.hospitalEquipmemts}>
                   <View style={styles.hospitalFacilities}>
-                    <Image
-                      style={styles.facilities}
-                      source={require('../assets/package.png')}
-                    />
+                    <TouchableOpacity
+                      onPress={() => alert('Wellness Packages')}>
+                      <Image
+                        style={styles.facilities}
+                        source={require('../assets/package.png')}
+                      />
+                    </TouchableOpacity>
                   </View>
 
                   <Text style={styles.facilitiesText}>Wellness packages</Text>
                 </View>
                 <View style={styles.hospitalEquipmemts}>
                   <View style={styles.hospitalFacilities}>
-                    <Image
-                      style={styles.facilities}
-                      source={require('../assets/bot.png')}
-                    />
+                    <TouchableOpacity onPress={() => alert('Ask Zoy')}>
+                      <Image
+                        style={styles.facilities}
+                        source={require('../assets/bot.png')}
+                      />
+                    </TouchableOpacity>
                   </View>
 
                   <Text style={styles.facilitiesText}>Ask Zoy</Text>
                 </View>
                 <View style={styles.hospitalEquipmemts}>
                   <View style={styles.hospitalFacilities}>
-                    <Image
-                      style={styles.facilities}
-                      source={require('../assets/hand-box.png')}
-                    />
+                    <TouchableOpacity onPress={() => alert('Home Healthcare')}>
+                      <Image
+                        style={styles.facilities}
+                        source={require('../assets/hand-box.png')}
+                      />
+                    </TouchableOpacity>
                   </View>
 
                   <Text style={styles.facilitiesText}>Home Healthcare</Text>
                 </View>
                 <View style={styles.hospitalEquipmemts}>
                   <View style={styles.hospitalFacilities}>
-                    <Image
-                      style={styles.facilities}
-                      source={require('../assets/hospitalpackage.png')}
-                    />
+                    <TouchableOpacity
+                      onPress={() => alert('Hospital Packages')}>
+                      <Image
+                        style={styles.facilities}
+                        source={require('../assets/hospitalpackage.png')}
+                      />
+                    </TouchableOpacity>
                   </View>
 
                   <Text style={styles.facilitiesText}>Hospital Packages</Text>
@@ -181,7 +206,7 @@ class HomeScreen extends Component {
               <Text style={styles.fifthHeadingText}>
                 Diagonostic Packages By Zoylo Labs
               </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => alert('View All Data')}>
                 <Text style={styles.viewAllText}>View All</Text>
               </TouchableOpacity>
             </View>
@@ -208,7 +233,7 @@ class HomeScreen extends Component {
                       <Text style={styles.offPercent}>60% off</Text>
                     </View>
                     <Text style={styles.ZoyloLabs}>ZOYLO LABS</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => alert('Book Your Seat')}>
                       <Text style={styles.bookText}> BOOK NOW</Text>
                     </TouchableOpacity>
                   </View>
@@ -233,7 +258,7 @@ class HomeScreen extends Component {
                       <Text style={styles.offPercent}>61% off</Text>
                     </View>
                     <Text style={styles.ZoyloLabs}>ZOYLO LABS</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => alert('Book Your Seat')}>
                       <Text style={styles.bookText}> BOOK NOW</Text>
                     </TouchableOpacity>
                   </View>
@@ -260,7 +285,7 @@ class HomeScreen extends Component {
                       <Text style={styles.offPercent}>60% off</Text>
                     </View>
                     <Text style={styles.ZoyloLabs}>ZOYLO LABS</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => alert('Book Your Seat')}>
                       <Text style={styles.bookText}> BOOK NOW</Text>
                     </TouchableOpacity>
                   </View>
@@ -285,7 +310,7 @@ class HomeScreen extends Component {
                       <Text style={styles.offPercent}>61% off</Text>
                     </View>
                     <Text style={styles.ZoyloLabs}>ZOYLO LABS</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => alert('Book Your Seat')}>
                       <Text style={styles.bookText}> BOOK NOW</Text>
                     </TouchableOpacity>
                   </View>
@@ -312,7 +337,7 @@ class HomeScreen extends Component {
                       <Text style={styles.offPercent}>60% off</Text>
                     </View>
                     <Text style={styles.ZoyloLabs}>ZOYLO LABS</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => alert('Book Your Seat')}>
                       <Text style={styles.bookText}> BOOK NOW</Text>
                     </TouchableOpacity>
                   </View>
@@ -337,7 +362,7 @@ class HomeScreen extends Component {
                       <Text style={styles.offPercent}>61% off</Text>
                     </View>
                     <Text style={styles.ZoyloLabs}>ZOYLO LABS</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => alert('Book Your Seat')}>
                       <Text style={styles.bookText}> BOOK NOW</Text>
                     </TouchableOpacity>
                   </View>
@@ -353,32 +378,48 @@ class HomeScreen extends Component {
             <ScrollView horizontal={true}>
               <View style={styles.sixthInnerContainer}>
                 <View style={styles.sixthInnerItems}>
-                  <Image
-                    style={styles.sixthImages}
-                    source={require('../assets/soap.png')}
-                  />
-                  <Text style={styles.sixthText}>Healthcare Products</Text>
+                  <TouchableOpacity
+                    style={styles.touch}
+                    onPress={() => alert('HealthCare Products')}>
+                    <Image
+                      style={styles.sixthImages}
+                      source={require('../assets/soap.png')}
+                    />
+                    <Text style={styles.sixthText}>Healthcare Products</Text>
+                  </TouchableOpacity>
                 </View>
                 <View style={styles.sixthInnerItems}>
-                  <Image
-                    style={styles.sixthImages}
-                    source={require('../assets/ayurveda.png')}
-                  />
-                  <Text style={styles.sixthText}>Ayurveda</Text>
+                  <TouchableOpacity
+                    style={styles.touch}
+                    onPress={() => alert('Ayurveda')}>
+                    <Image
+                      style={styles.sixthImages}
+                      source={require('../assets/ayurveda.png')}
+                    />
+                    <Text style={styles.sixthText}>Ayurveda</Text>
+                  </TouchableOpacity>
                 </View>
                 <View style={styles.sixthInnerItems}>
-                  <Image
-                    style={styles.sixthImages}
-                    source={require('../assets/bottle.png')}
-                  />
-                  <Text style={styles.sixthText}>Homeopathy</Text>
+                  <TouchableOpacity
+                    style={styles.touch}
+                    onPress={() => alert('Homeopathy')}>
+                    <Image
+                      style={styles.sixthImages}
+                      source={require('../assets/bottle.png')}
+                    />
+                    <Text style={styles.sixthText}>Homeopathy</Text>
+                  </TouchableOpacity>
                 </View>
                 <View style={styles.sixthInnerItems}>
-                  <Image
-                    style={styles.sixthImages}
-                    source={require('../assets/hospitalpackage.png')}
-                  />
-                  <Text style={styles.sixthText}>Healthcare</Text>
+                  <TouchableOpacity
+                    style={styles.touch}
+                    onPress={() => alert('HealthCare ')}>
+                    <Image
+                      style={styles.sixthImages}
+                      source={require('../assets/hospitalpackage.png')}
+                    />
+                    <Text style={styles.sixthText}>Healthcare</Text>
+                  </TouchableOpacity>
                 </View>
               </View>
             </ScrollView>
@@ -394,7 +435,9 @@ class HomeScreen extends Component {
                 <Text style={styles.descriptionHeading}>
                   Order Medicine using presciption
                 </Text>
-                <TouchableOpacity style={styles.uploadButton}>
+                <TouchableOpacity
+                  style={styles.uploadButton}
+                  onPress={() => alert('Upload presciption')}>
                   <Text style={styles.btnText}>UPLOAD</Text>
                 </TouchableOpacity>
               </View>
@@ -411,7 +454,9 @@ class HomeScreen extends Component {
                 <Text style={styles.descriptionHeading}>
                   Online doctor Consultation
                 </Text>
-                <TouchableOpacity style={styles.consultButton}>
+                <TouchableOpacity
+                  style={styles.consultButton}
+                  onPress={() => alert('Consult Now')}>
                   <Text style={styles.consultText}>CONSULT NOW</Text>
                 </TouchableOpacity>
               </View>
@@ -430,7 +475,9 @@ class HomeScreen extends Component {
                 <Text style={styles.descriptionHeading}>
                   Take Free Online Health Assessment
                 </Text>
-                <TouchableOpacity style={styles.startButton}>
+                <TouchableOpacity
+                  style={styles.startButton}
+                  onPress={() => alert('Start')}>
                   <Text style={styles.startText}>START</Text>
                 </TouchableOpacity>
               </View>
@@ -519,6 +566,9 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 0.5,
     height: 13,
+  },
+  touch: {
+    alignItems: 'center',
   },
   secondConatiner: {
     height: 230,
