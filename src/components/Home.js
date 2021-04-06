@@ -23,27 +23,7 @@ import {
   highrevenue,
   lessrevenue,
 } from '../modules/movies/action';
-const List = [
-  {id: 28, name: 'Action'},
-  {id: 12, name: 'Adventure'},
-  {id: 16, name: 'Animation'},
-  {id: 35, name: 'Comedy'},
-  {id: 80, name: 'Crime'},
-  {id: 99, name: 'Documentary'},
-  {id: 18, name: 'Drama'},
-  {id: 10751, name: 'Family'},
-  {id: 14, name: 'Fantasy'},
-  {id: 36, name: 'History'},
-  {id: 27, name: 'Horror'},
-  {id: 10402, name: 'Music'},
-  {id: 9648, name: 'Mystery'},
-  {id: 10749, name: 'Romance'},
-  {id: 878, name: 'Science Fiction'},
-  {id: 10770, name: 'TV Movie'},
-  {id: 53, name: 'Thriller'},
-  {id: 10752, name: 'War'},
-  {id: 37, name: 'Western'},
-];
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -112,18 +92,9 @@ class Home extends Component {
 
             <View style={styles.line} />
             <Text style={styles.date}>English</Text>
-            {List.map((data) => {
-              for (var key in Object.values(item.genre_ids)) {
-                console.log('keys', key);
-                if (key === data.id) {
-                  return (
-                    <View>
-                      <Text style={styles.date}>data.name</Text>
-                    </View>
-                  );
-                }
-              }
-            })}
+          </View>
+          <View style={styles.genre}>
+            <Text style={styles.date}>Action,Science Fiction</Text>
           </View>
         </View>
         <View
@@ -332,7 +303,6 @@ class Home extends Component {
                     page: this.state.page + 1,
                   });
                   this.morePages(this.state.page);
-                  this.props.lesspopular(this.state.page);
                 }}
               />
             )}
@@ -409,7 +379,6 @@ class Home extends Component {
             </View>
           </View>
         </Modal>
-        {console.log('Languagessssss: ', this.props.genreData)}
       </>
     );
   }
@@ -417,8 +386,6 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   return {
     listData: state.list,
-    genreData: state.gen,
-    // language: state.lang,
   };
 };
 const mapDispatchToProps = (dispatch) => ({
@@ -534,7 +501,6 @@ const styles = StyleSheet.create({
     width: 187,
     justifyContent: 'center',
     alignItems: 'center',
-    //backgroundColor: 'red',
   },
   gridtitle: {
     color: 'white',
@@ -593,5 +559,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  genre: {
+    marginTop: 10,
   },
 });

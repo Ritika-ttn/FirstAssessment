@@ -7,9 +7,7 @@ export const listing = (page) => async (dispatch) => {
         method: 'GET',
       },
     );
-    {
-      console.log('Page: ', page);
-    }
+
     const data = await response.json();
     // const result = data.results;
     dispatch({
@@ -18,23 +16,6 @@ export const listing = (page) => async (dispatch) => {
     });
   } catch (error) {
     alert('Get Error');
-  }
-};
-export const genre = () => async (dispatch) => {
-  try {
-    const response = await fetch(
-      'https://api.themoviedb.org/3/genre/movie/list?api_key=68c65e2615ae37d7b27419b3813e8930&language=en-US',
-      {
-        method: 'GET',
-      },
-    );
-    const result = await response.json();
-    dispatch({
-      type: ApiTypes.GENRE,
-      payload: result,
-    });
-  } catch (error) {
-    alert('Error');
   }
 };
 
@@ -143,21 +124,3 @@ export const lessrevenue = (page) => async (dispatch) => {
     alert('Error');
   }
 };
-
-// export const language = () => async (dispatch) => {
-//   try {
-//     const response = await fetch(
-//       'https://api.themoviedb.org/3/configuration/languages?api_key=68c65e2615ae37d7b27419b3813e8930',
-//       {
-//         method: 'GET',
-//       },
-//     );
-//     const result = await response.json();
-//     dispatch({
-//       type: ApiTypes.LANGUAGES,
-//       payload: result,
-//     });
-//   } catch (error) {
-//     alert('Language Error');
-//   }
-// };

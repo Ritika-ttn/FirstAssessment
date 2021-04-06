@@ -1,7 +1,6 @@
 import ApiTypes from './types';
 const initialState = {
   list: [],
-  gen: [],
 };
 export default function ApiReducer(state = initialState, action) {
   console.log('Action ', action);
@@ -12,11 +11,7 @@ export default function ApiReducer(state = initialState, action) {
         ...state,
         list: [...state.list, ...action.payload],
       };
-    case ApiTypes.GENRE:
-      return {
-        ...state,
-        gen: action.payload,
-      };
+
     case ApiTypes.RELEASE:
       return {
         list: action.payload,

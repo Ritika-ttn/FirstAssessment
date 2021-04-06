@@ -27,3 +27,5 @@ https://www.themoviedb.org/documentation/api
 3. API URL  will be : https://api.themoviedb.org/3/discover/movie
 
 4. API Documentation : https://developers.themoviedb.org/3/discover/movie-discover
+
+![output](./src/assets/output.gif)
