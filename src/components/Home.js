@@ -390,7 +390,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => ({
   listing: (page) => dispatch(listing(page)),
-  genre: () => dispatch(genre()),
+
   release: (page) => dispatch(release(page)),
   old: (page) => dispatch(old(page)),
   mostpopular: (page) => dispatch(mostpopular(page)),
