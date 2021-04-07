@@ -29,3 +29,4 @@ https://www.themoviedb.org/documentation/api
 4. API Documentation : https://developers.themoviedb.org/3/discover/movie-discover
 
 ![output](./src/assets/output.gif)
+![output](./src/assets/output2.gif)
