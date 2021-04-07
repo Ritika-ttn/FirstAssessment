@@ -46,7 +46,6 @@ class Home extends Component {
     });
   };
   setPage = (value) => {
-    console.log('XYZ: ', value);
     this.setState({
       page: value,
     });
