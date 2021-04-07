@@ -15,7 +15,6 @@ import {connect} from 'react-redux';
 
 import {
   listing,
-  genre,
   release,
   old,
   mostpopular,
@@ -262,7 +261,7 @@ class Home extends Component {
                       this.refreshList(true);
                       setTimeout(() => {
                         this.setPage(1);
-                        this.props.listing(this.state.page);
+                        this.props.listing(1);
                         this.refreshList(false);
                       }, 5000);
                     }}
