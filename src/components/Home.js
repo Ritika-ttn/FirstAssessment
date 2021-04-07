@@ -52,11 +52,7 @@ class Home extends Component {
       page: value,
     });
   };
-  showLoader = (loader) => {
-    this.setState({
-      loader: loader,
-    });
-  };
+
   componentDidMount() {
     this.props.listing(1);
   }
